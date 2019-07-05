@@ -10,7 +10,7 @@ const frontendRouter = new Router();
 
 const bundle = fs.readFileSync(path.resolve(__dirname, '../../dist/server.bundle.js'), 'utf-8');
 const renderer = require('vue-server-renderer').createBundleRenderer(bundle, {
-  template: fs.readFileSync(path.resolve(__dirname, '../../dist/index.ssr.html'), 'utf-8')
+  template: fs.readFileSync(path.resolve(__dirname, '../dist/index.ssr.html'), 'utf-8')
 });
 
 // 后端Server
@@ -29,7 +29,7 @@ backendRouter.get('/index', (ctx, next) => {
   });
 });
 
-backendApp.use(serve(path.resolve(__dirname, '../../dist')));
+backendApp.use(serve(path.resolve(__dirname, '../dist')));
 
 backendApp
   .use(backendRouter.routes())
@@ -42,13 +42,13 @@ backendApp.listen(3000, () => {
 
 // 前端Server
 frontendRouter.get('/index', (ctx, next) => {
-  let html = fs.readFileSync(path.resolve(__dirname, '../../dist/index.html'), 'utf-8');
+  let html = fs.readFileSync(path.resolve(__dirname, '../dist/index.html'), 'utf-8');
   ctx.type = 'html';
   ctx.status = 200;
   ctx.body = html;
 });
 
-frontendApp.use(serve(path.resolve(__dirname, '../../dist')));
+frontendApp.use(serve(path.resolve(__dirname, '../dist')));
 
 frontendApp
   .use(frontendRouter.routes())

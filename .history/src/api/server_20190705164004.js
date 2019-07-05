@@ -42,7 +42,7 @@ backendApp.listen(3000, () => {
 
 // 前端Server
 frontendRouter.get('/index', (ctx, next) => {
-  let html = fs.readFileSync(path.resolve(__dirname, '../../dist/index.html'), 'utf-8');
+  let html = fs.readFileSync(path.resolve(__dirname, '../dist/index.html'), 'utf-8');
   ctx.type = 'html';
   ctx.status = 200;
   ctx.body = html;

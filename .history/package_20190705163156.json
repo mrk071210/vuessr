@@ -10,15 +10,12 @@
   },
   "dependencies": {
     "axios": "^0.19.0",
-    "babel-plugin-dynamic-import-webpack": "^1.1.0",
     "compressible": "^2.0.17",
     "cross-env": "^5.2.0",
     "es6-promise": "^4.2.8",
     "koa": "^2.7.0",
     "koa-body": "^4.1.0",
     "koa-compress": "^3.0.0",
-    "koa-router": "^7.4.0",
-    "koa-static": "^5.0.0",
     "lru-cache": "^5.1.1",
     "vue": "^2.6.10",
     "vue-router": "^3.0.7",
@@ -43,18 +40,17 @@
     "css-loader": "^3.0.0",
     "file-loader": "^4.0.0",
     "friendly-errors-webpack-plugin": "^1.7.0",
-    "html-webpack-plugin": "^3.2.0",
     "json-loader": "^0.5.7",
     "mini-css-extract-plugin": "^0.7.0",
     "url-loader": "^2.0.1",
     "vue-html-loader": "^1.2.4",
     "vue-loader": "^15.7.0",
     "vue-style-loader": "^4.1.2",
-    "webpack": "^4.35.2",
     "webpack-cli": "^3.3.5",
     "webpack-dev-middleware": "^3.7.0",
     "webpack-hot-middleware": "^2.25.0",
     "webpack-merge": "^4.2.1",
-    "webpack-node-externals": "^1.7.2"
+    "webpack-node-externals": "^1.7.2",
+    "webpack": "^4.35.2"
   }
 }

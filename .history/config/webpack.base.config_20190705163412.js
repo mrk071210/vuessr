@@ -1,5 +1,5 @@
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
-const path = require("path");
+const path = reauire("path");
 
 module.exports = {
   mode: "development",
@@ -7,7 +7,7 @@ module.exports = {
     extensions: [".js", ".vue"]
   },
   output: {
-    path: path.resolve(__dirname, "../dist"),
+    path: path.resolve(__dirname, "../dixt"),
     filename: "[name].bundle.js"
   },
   module: {
